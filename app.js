@@ -74,6 +74,15 @@ function for getting the recipes
    });
  });
 
+ app.use(function(req, res, next){
+   User.find({}, function(err, people){
+     if(err) return next(err);
+     res.locals.people = people;
+     next();
+   });
+ });
+
+
  //ejs engine
  app.engine('ejs', engine);
 

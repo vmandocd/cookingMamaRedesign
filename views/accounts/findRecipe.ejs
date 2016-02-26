@@ -4,11 +4,30 @@
   <div id="pplBtn" class="container">
     <h1 style="padding-top:50px; padding-left:50px;">Find a Recipe</h1>
     <h4>
-    <form class="ui-filterable" style="padding-left:50px; padding-bottom:25px;">
-        <input id="myFilter" data-type="search" placeholder="Type food...">
-    </form>
+
+  <div class="findRecipeRedesign">
+     <div class="container">
+          <div class="row">
+  
+            <% for(var i = 0; i < products.length; i++) { %>
+
+              <div class="col-xs-6" style="opacity:0.9;">
+                  <div class="thumbnail">
+                      <img src="<%= products[i].image %>">
+                      <div class="caption">
+                          <h3><%= products[i].name %></h3>
+                          <p><a href="/product/<%= products[i]._id %>" class="btn btn-primary">Cook Now!</a></p>
+                      </div>
+                  </div>
+              </div>
+            <% } %>
+
+          </div>
+      </div>     
+  </div>
 
 
+<!--
     <% for(var i = 0; i < products.length; i++) { %>
   <div id="fodderBox" class="container">
 
@@ -19,7 +38,7 @@
     </ul>
     </div>
     <% } %>
-
+-->
 
     </h4>
   </div>

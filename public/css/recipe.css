@@ -1,3 +1,15 @@
+#background {
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    left: 0px; 
+    top: 0px; 
+    z-index: -1;
+}
+.stretch {
+    width:100%;
+    height:100%;
+}
 .btn{
   margin: auto 5px 10px auto;
   display: inline;
@@ -20,8 +32,11 @@
   background-color: white;
   text-align: center;
   padding-right: 75px;
-  padding-top: 10px;
+  padding-top: 20px;
   padding-bottom: 25px;
+}
+#fodderBox h1{
+  padding-top: 10px;
 }
 #midContainer{
   padding-top: 20px;

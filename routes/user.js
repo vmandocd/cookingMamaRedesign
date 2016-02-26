@@ -91,15 +91,6 @@ router.get('/profile', function(req, res ,next){
   });
 });
 
-router.get('/add-recipe', function(req, res ,next){
-  //search for a particular user
-  User.findById({ _id: req.user._id}, function(err, user){
-    if(err) return next(err);
-    //render the page with an object (user)
-    res.render('accounts/add-recipe', { user: user });
-  });
-});
-
 router.get('/findRecipe', function(req, res ,next){
   //search for a particular user
   User.findById({ _id: req.user._id}, function(err, user){

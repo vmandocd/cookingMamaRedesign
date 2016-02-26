@@ -6,11 +6,16 @@
     <title>Jumbotron Template for Bootstrap</title>
     <!-- <link rel="stylesheet" href="/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/css/timer.css">
     <link rel="stylesheet" href="/css/cookingProfile.css">
   </head>
 
-  <body background="https://s3.amazonaws.com/files.creativemarket.com/images/screenshots/products/10/106/106396/keih4mm9pyv3kpq8scymlnub2aecxzs9iscdane82nvbmfcc3leqqh7pjk0adoki-o.jpg" style="background-repeat: no-repeat; background-size:cover;">
+  <body>
+    <div id="background">
+      <img src="https://s3.amazonaws.com/files.creativemarket.com/images/screenshots/products/10/106/106396/keih4mm9pyv3kpq8scymlnub2aecxzs9iscdane82nvbmfcc3leqqh7pjk0adoki-o.jpg" class="stretch" />
+    </div>
+
 
     <% include ./partials/navbar %>
 
@@ -20,5 +25,6 @@
     <script src="/js/jquery.min.js"></script>
     <script src="/js/timer.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   </body>
 </html>

@@ -5,12 +5,65 @@
 
   <div id="pplBtn" class="container">
     <h1 style="padding-top:50px;">Feed</h1>
-    <a href="/profile"><button id="testjs" class="btn btn-primary">You</button></a>
-    <a href="/friendFeed"><button id="testjs" class="btn btn-primary active">Friends</button></a>
     <a href="/publicFeed"><button id="testjs" class="btn btn-primary">Public</button></a>
+    <a href="/friendFeed"><button id="testjs" class="btn btn-primary active">Friends</button></a>
+    <a href="/profile"><button id="testjs" class="btn btn-primary">You</button></a>
   </div>
 
-  <!-- {{#each friendFeeds}} -->
+  <div class="profileRedesign">
+      <div class="container">
+          <div class="row">
+
+              <div class="col-xs-6" style="opacity:0.9;">
+                  <div class="thumbnail">
+                      <img src="<%= user.profile.picture %>">
+                      <div class="caption">
+                          <h3><%= user.profile.name %> made <a href="#">Pasta</a></h3>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-xs-6" style="opacity:0.9;">
+                  <div class="thumbnail">
+                      <img src="<%= user.profile.picture %>">
+                      <div class="caption">
+                          <h3><%= user.profile.name %> made <a href="#">Mongolian Beeeeef</a></h3>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-xs-6" style="opacity:0.9;">
+                  <div class="thumbnail">
+                      <img src="<%= user.profile.picture %>">
+                      <div class="caption">
+                          <h3><%= user.profile.name %> made <a href="#">Rice</a></h3>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-xs-6" style="opacity:0.9;">
+                  <div class="thumbnail">
+                      <img src="<%= user.profile.picture %>">
+                      <div class="caption">
+                          <h3><%= user.profile.name %> made <a href="#">Pho</a></h3>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-xs-6" style="opacity:0.9;">
+                  <div class="thumbnail">
+                      <img src="<%= user.profile.picture %>">
+                      <div class="caption">
+                          <h3><%= user.profile.name %> made <a href="#">Amazing Stuff </a></h3>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+      </div>     
+  </div>
+
+  <!--
   <div id="fodderBox" class="container">
     <h4>
     <div class="entry-div">
@@ -19,6 +72,6 @@
     </div>
     </h4>
   </div>
-  <!-- {{/each}} -->
+  -->
 
 </div>
