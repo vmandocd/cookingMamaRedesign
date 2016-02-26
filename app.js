@@ -4,6 +4,7 @@
  var express = require('express');
  var morgan = require('morgan');
  var mongoose = require('mongoose');
+ var http = require('http');
 
  /*reading the data */
  var bodyParser = require('body-parser');
@@ -27,6 +28,7 @@
  var Category = require('./models/category');
  var app = express();
 
+/***********Local setup************************/
  mongoose.connect(secret.database, function(err){
    if(err){
      console.log(err);
@@ -34,11 +36,19 @@
      console.log("Connected to the MongoDB");
    }
  });
+/***********Local setup************************/
+
+ /*****Heroku Setup********/
+ // mongoose.connect(process.env.MONGOLAB_URI);
+ // var port = process.env.PORT;
+ // var server = http.createServer(app);
+  /*****Heroku Setup********/
+
 
  //this tells express that the public folder is for the static files
  app.use(express.static(__dirname + '/public'));
 
- //middleware (don't know why I need this
+ //middleware
  app.use(morgan('dev'));
 
  //express application can parse json data format
@@ -82,7 +92,6 @@ function for getting the recipes
    });
  });
 
-
  //ejs engine
  app.engine('ejs', engine);
 
@@ -98,71 +107,9 @@ function for getting the recipes
  app.use(userRoutes);
  app.use(adminRoutes);
 
+/******Heroku Setup: change 'secret.port' to 'port' *************/
+/******Local Setup: change 'port' to 'secret.port'  *************/
  app.listen(secret.port, function(err){
    if(err) throw err;
    console.log("Server is running on port: " + secret.port);
  });
-
-
-/******************************************************************************/
-// var express = require('express');
-// var http = require('http');
-// var path = require('path');
-// var handlebars = require('express3-handlebars')
-//
-// var index = require('./routes/index');
-//
-// var login = require('./routes/login');
-// var signup = require('./routes/signup');
-// var friendFeed = require('./routes/friendFeed');
-// var publicFeed = require('./routes/publicFeed');
-// var profile = require('./routes/profile');
-// var findRecipe = require('./routes/findRecipe');
-// var recipe = require('./routes/recipe');
-// var cooking = require('./routes/cooking');
-//
-// // Example route
-// // var user = require('./routes/user');
-//
-// var app = express();
-//
-// // all environments
-// app.set('port', process.env.PORT || 3000);
-// app.set('views', path.join(__dirname, 'views'));
-// app.engine('handlebars', handlebars());
-// app.set('view engine', 'handlebars');
-// app.use(express.favicon());
-// app.use(express.logger('dev'));
-// app.use(express.json());
-// app.use(express.urlencoded());
-// app.use(express.methodOverride());
-// app.use(express.cookieParser('Intro HCI secret key'));
-// app.use(express.session());
-// app.use(app.router);
-// app.use(express.static(path.join(__dirname, 'public')));
-//
-// // development only
-// if ('development' == app.get('env')) {
-//   app.use(express.errorHandler());
-// }
-//
-// // Add routes here
-// app.get('/', index.view);
-// app.get('/login', login.view);
-// app.get('/signup', signup.view);
-// app.get('/friendFeed', friendFeed.view);
-// app.get('/publicFeed', publicFeed.view);
-// app.get('/profile', profile.view);
-// app.get('/findRecipe', findRecipe.view);
-// app.get('/recipe/:name', recipe.view);
-// app.get('/cooking/:name', cooking.view);
-//
-// //app.get('/cooking/:name', cookingRecipe.recipeInfo);
-//
-//
-// // Example route
-// // app.get('/users', user.list);
-//
-// http.createServer(app).listen(app.get('port'), function(){
-//   console.log('Express server listening on port ' + app.get('port'));
-// });

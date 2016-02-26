@@ -5,42 +5,31 @@
   <div id="pplBtn" class="container">
     <h1 style="padding-top:50px;">Feed</h1>
     <a href="/publicFeed"><button id="testjs" class="btn btn-primary active">Public</button></a>
-    <a href="/friendFeed"><button id="testjs" class="btn btn-primary">Friends</button></a>
     <a href="/profile"><button id="testjs" class="btn btn-primary">You</button></a>
   </div>
 
   <div class="pubFeedRedesign">
-     <div class="container">
+      <div class="container">
           <div class="row">
   
-            <% for(var i = 0; i < people.length; i++) { %>
+            <% if(people.length > 0) {%>
+              <% for(var i = 0; i < people.length; i++) { %>
+                <% for(var j = 0; j < people[i].history.length; j++) { %>
 
-              <div class="col-xs-6" style="opacity:0.9;">
-                  <div class="thumbnail">
-                      <img src="<%= user.profile.picture %>">
-                      <div class="caption">
-                          <h3><a href="/profile"><%= people[i].profile.name %></a> prepared Spaghetti</h3>
-                          <p><a href="/recipe" class="btn btn-primary">Cook Now!</a></p>
+                  <div class="col-xs-6" style="opacity:0.9;">
+                      <div class="thumbnail">
+                          <img src="<%= user.profile.picture %>">
+                          <div class="caption">
+                              <h3><a href="/profile"><%= people[i].profile.name %></a> prepared <a href="/product/<%= people[i].history[j].item %>"><%= people[i].history[j].name %></a></h3>
+                          </div>
                       </div>
                   </div>
-              </div>
+
+                <% } %>
+              <% } %>
             <% } %>
 
           </div>
       </div>     
   </div>
-
-<!--
-  <div id="fodderBox" class="container">
-    <h4>
-      <% for(var i = 0; i < people.length; i++) { %>
-    <div class="entry-div">
-      <img src="<%= user.profile.picture %>" class="detailsImage">
-      <p><a href="/profile"><%= people[i].profile.name %></a> prepared <a href="/recipe">Spaghetti</a></p>
-    </div>
-    <% } %>
-
-    </h4>
-  </div>
 </div>
--->

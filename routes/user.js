@@ -71,16 +71,6 @@ router.get('/publicFeed', function(req, res ,next){
   });
 });
 
-router.get('/friendFeed', function(req, res ,next){
-  //search for a particular user
-  User.findOne({ _id: req.user._id}, function(err, user){
-
-    if(err) return next(err);
-    //render the page with an object (user)
-    res.render('accounts/friendFeed', { user: user });
-  });
-});
-
 router.get('/profile', function(req, res ,next){
   //search for a particular user
   User.findOne({ _id: req.user._id}, function(err, user){
@@ -150,6 +140,31 @@ router.get('/completedCook', function(req, res ,next){
     if(err) return next(err);
     //render the page with an object (user)
     res.render('accounts/completedCook', { user: user });
+  });
+});
+
+router.get('/completedCook/:id', function(req, res, next){
+  Product.findById({_id: req.params.id}, function(err, product){
+    if(err) return next(err);
+    res.render('accounts/completedCook', {
+      product: product
+    });
+  });
+});
+
+router.post('/completedCook/:product_id', function(req, res, next){
+  User.findOne({_id: req.user._id}, function(err, user){
+    var d = new Date();
+    var dateCooked = d.getDate();
+    user.history.push({
+      item: req.body.product_id,
+      name: req.body.product_name,
+      date: dateCooked
+    });
+    user.save(function(err){
+      if(err) return next(err);
+      return res.redirect('/publicFeed');
+    });
   });
 });
 

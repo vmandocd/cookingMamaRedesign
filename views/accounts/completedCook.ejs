@@ -2,8 +2,13 @@
 
 <div class="container">
   <div id="pplBtn" class="container">
-    <h1 style="padding-top:50px; padding-left:50px;">Cooking Complete !!</h1>
+    <h1 style="padding-top:50px; padding-left:50px;">Cooking <%= product.name %> Complete !!</h1>
     <a href="/products/<%= categories[0]._id %>"><button id="testjs" class="btn btn-primary">Find Another Recipe</button></a>
     <a href="/recipe"><button id="testjs" class="btn btn-primary">Cook It Again</button></a>
-    <a href="/publicFeed"><button id="testjs" class="btn btn-primary">Post and Finish</button></a>
+
+    <form method="post">
+    <input type="hidden" name="product_id" value="<%= product._id %>"></input>
+    <input type="hidden" name="product_name" value="<%= product.name %>"></input>
+    <button type="submit" class="btn btn-success">Post and Finish</button>
+    </form>
 </div>
