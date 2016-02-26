@@ -1,0 +1,34 @@
+{
+	"publicFeeds": [
+		{
+			"username":"Von",
+			"name": "Pho",
+			"imageURL": "http://vignette2.wikia.nocookie.net/athfwiki/images/a/a8/Meatwad.jpg/revision/latest?cb=20110111234925"		
+		},
+		{
+			"username":"Adam Levine",
+			"name": "Sugar",
+			"imageURL": "http://vignette2.wikia.nocookie.net/athfwiki/images/a/a8/Meatwad.jpg/revision/latest?cb=20110111234925"		
+		},
+		{
+			"username":"Walt",
+			"name": "Breaking Bread",
+			"imageURL": "http://vignette2.wikia.nocookie.net/athfwiki/images/a/a8/Meatwad.jpg/revision/latest?cb=20110111234925"		
+		},
+		{
+			"username":"Hannibal Lecter",
+			"name": "Flesh",
+			"imageURL": "http://vignette2.wikia.nocookie.net/athfwiki/images/a/a8/Meatwad.jpg/revision/latest?cb=20110111234925"		
+		},
+		{
+			"username":"Sweeney Todd",
+			"name": "Meat Pie",
+			"imageURL": "http://vignette2.wikia.nocookie.net/athfwiki/images/a/a8/Meatwad.jpg/revision/latest?cb=20110111234925"		
+		},
+		{
+			"username":"Pho",
+			"name": "Von",
+			"imageURL": "http://vignette2.wikia.nocookie.net/athfwiki/images/a/a8/Meatwad.jpg/revision/latest?cb=20110111234925"		
+		}
+	]
+}

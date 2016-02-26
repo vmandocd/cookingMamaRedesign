@@ -1,0 +1,34 @@
+<% layout('layout') -%>
+
+<div id="midContainer" class="container">
+
+
+  <div id="pplBtn" class="container">
+    <h1 style="padding-top:50px;">Feed</h1>
+    <a href="/profile"><button id="testjs" class="btn btn-primary active">You</button></a>
+    <a href="/friendFeed"><button id="testjs" class="btn btn-primary">Friends</button></a>
+    <a href="/publicFeed"><button id="testjs" class="btn btn-primary">Public</button></a>
+  </div>
+
+  <div id="fodderBox" class="container">
+    <h4>
+    <div class="entry-div">
+      <img src="<%= user.profile.picture %>" class="detailsImage">
+      <p><%= user.profile.name %></a> prepared <a href="/recipe">Pasta</a></p>
+    </div>
+    <div class="entry-div">
+      <img src="<%= user.profile.picture %>" class="detailsImage">
+      <p><%= user.profile.name %></a> prepared <a href="/recipe">Cereal</a></p>
+    </div>
+    <div class="entry-div">
+      <img src="<%= user.profile.picture %>" class="detailsImage">
+      <p><%= user.profile.name %></a> prepared <a href="/recipe">Rice</a></p>
+    </div>
+    <div class="entry-div">
+      <img src="<%= user.profile.picture %>" class="detailsImage">
+      <p><%= user.profile.name %></a> prepared <a href="/recipe">Potato Salad</a></p>
+    </div>
+    </h4>
+  </div>
+
+</div>

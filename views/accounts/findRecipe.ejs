@@ -1,0 +1,27 @@
+<% layout('findRecipeLayout') -%>
+
+<div id="midContainer" class="container">
+  <div id="pplBtn" class="container">
+    <h1 style="padding-top:50px; padding-left:50px;">Find a Recipe</h1>
+    <h4>
+    <form class="ui-filterable" style="padding-left:50px; padding-bottom:25px;">
+        <input id="myFilter" data-type="search" placeholder="Type food...">
+    </form>
+
+
+    <% for(var i = 0; i < products.length; i++) { %>
+  <div id="fodderBox" class="container">
+
+    <div id="fodderBox2" class="container">
+    <ul data-role="listview" data-filter="true" data-input="#myFilter" data-autodividers="true" data-inset="true">
+      <img src="<%= products[i].image %>" class="detailsImage">
+      <li style="padding-left:100px;"><a href="/product/<%= products[i]._id %>"><%= products[i].name %></a></li>
+    </ul>
+    </div>
+    <% } %>
+
+
+    </h4>
+  </div>
+
+</div>

@@ -1,0 +1,28 @@
+{
+	"meFeeds": [
+		{
+			"name": "Pasta",
+			"imageURL": "http://vignette2.wikia.nocookie.net/athfwiki/images/a/a8/Meatwad.jpg/revision/latest?cb=20110111234925"		
+		},
+		{
+			"name": "Brownies",
+			"imageURL": "http://vignette2.wikia.nocookie.net/athfwiki/images/a/a8/Meatwad.jpg/revision/latest?cb=20110111234925"		
+		},
+		{
+			"name": "Cookies",
+			"imageURL": "http://vignette2.wikia.nocookie.net/athfwiki/images/a/a8/Meatwad.jpg/revision/latest?cb=20110111234925"		
+		},
+		{
+			"name": "Ratatouille",
+			"imageURL": "http://vignette2.wikia.nocookie.net/athfwiki/images/a/a8/Meatwad.jpg/revision/latest?cb=20110111234925"		
+		},
+		{
+			"name": "Pizza",
+			"imageURL": "http://vignette2.wikia.nocookie.net/athfwiki/images/a/a8/Meatwad.jpg/revision/latest?cb=20110111234925"		
+		},
+		{
+			"name": "Spaghetti",
+			"imageURL": "http://vignette2.wikia.nocookie.net/athfwiki/images/a/a8/Meatwad.jpg/revision/latest?cb=20110111234925"		
+		}
+	]
+}

@@ -1,0 +1,24 @@
+{
+	"findRecipes": [
+		{
+			"name": "Cinnamon Rolls",
+			"imageURL": "http://vignette2.wikia.nocookie.net/athfwiki/images/a/a8/Meatwad.jpg/revision/latest?cb=20110111234925"		
+		},
+		{
+			"name": "Chicken Pot Pie",
+			"imageURL": "http://vignette2.wikia.nocookie.net/athfwiki/images/a/a8/Meatwad.jpg/revision/latest?cb=20110111234925"		
+		},
+		{
+			"name": "Oatmeal",
+			"imageURL": "http://vignette2.wikia.nocookie.net/athfwiki/images/a/a8/Meatwad.jpg/revision/latest?cb=20110111234925"		
+		},
+		{
+			"name": "Ramen",
+			"imageURL": "http://vignette2.wikia.nocookie.net/athfwiki/images/a/a8/Meatwad.jpg/revision/latest?cb=20110111234925"		
+		},
+		{
+			"name": "Twinkie",
+			"imageURL": "http://vignette2.wikia.nocookie.net/athfwiki/images/a/a8/Meatwad.jpg/revision/latest?cb=20110111234925"		
+		}
+	]
+}

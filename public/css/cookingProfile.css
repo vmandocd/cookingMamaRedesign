@@ -1,0 +1,45 @@
+.btn{
+  margin: auto 5px 10px auto;
+  display: inline;
+  color:black;
+  background:#FFFFFF;
+  border-color:#000000;
+}
+
+.container{
+  padding: 0px !important;
+}
+.navbar-brand img{
+  display:inline;
+  /*padding: 3px;*/
+}
+.content{
+
+        font-size: 18px;
+        min-height: 100px;
+        /*max-width: inherit;*/
+        background: #dbdfe5;
+        margin-bottom: 5px;
+        margin-left: -20px;
+        margin-right: 10px;
+
+}
+.main-content{
+    min-height: 440px;
+    background: white;
+    /*margin: 5px, auto, 10px, auto;*/
+}
+.pager{
+    padding-top: 280px;
+
+}
+
+.recipe{
+    padding: 0px, 0px, 0px, 0px;
+}
+#top{
+    margin-top: 70px;
+}
+#recipe{
+    padding: 20px, auto, 0px, auto;
+}

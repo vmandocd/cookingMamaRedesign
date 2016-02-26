@@ -1,0 +1,23 @@
+<% layout('layout') -%>
+
+<div id="midContainer" class="container">
+
+  <div id="pplBtn" class="container">
+    <h1 style="padding-top:70px">Feed</h1>
+    <a href="#"><button id="testjs" class="btn btn-primary active">You</button></a>
+    <a href="./friendFeed"><button id="testjs" class="btn btn-primary">Friends</button></a>
+    <a href="./publicFeed"><button id="testjs" class="btn btn-primary">Public</button></a>
+  </div>
+
+  <!-- {{#each meFeeds}} -->
+  <div id="fodderBox" class="container">
+    <h4>
+    <div class="entry-div">
+      <img src="{{imageURL}}" class="detailsImage">
+      <p>You</a> prepared <a href="./recipe/{{name}}">{{name}}</a></p>
+    </div>
+    </h4>
+  </div>
+  <!-- {{/each}} -->
+
+</div>

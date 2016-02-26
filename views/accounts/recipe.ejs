@@ -1,0 +1,25 @@
+<%- layout('recipeLayout') -%>
+
+<!-- <script>
+  var theURL = document.location+"";
+  var theSplit = theURL.split("recipe/");
+  var theName = decodeURIComponent(theSplit[1]);
+</script> -->
+<div id="midContainer" class="container">
+  <div id="fodderBox" class="container">
+
+    <br></br>
+
+      <h1> <%= product.name %> Recipe</h1>
+        <ol>
+          <h4>Ingredients:</h4>
+          <li><%= product.ingredients%></li>
+      </ol>
+
+    <a href="/cooking/<%= product._id %>"><button id="testjs" class="btn btn-primary btn-lg">Start</button></a>
+  </div>
+</div>
+<!-- <script>
+  var theDiv = document.getElementById('recipeBox-'+theName);
+  theDiv.style.display="block";
+</script> -->

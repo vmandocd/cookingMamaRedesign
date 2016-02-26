@@ -1,0 +1,34 @@
+{
+	"friendFeeds": [
+		{
+			"username":"Ross",
+			"name": "Ham",
+			"imageURL": "http://vignette2.wikia.nocookie.net/athfwiki/images/a/a8/Meatwad.jpg/revision/latest?cb=20110111234925"		
+		},
+		{
+			"username":"Joey",
+			"name": "Chicken Wings",
+			"imageURL": "http://vignette2.wikia.nocookie.net/athfwiki/images/a/a8/Meatwad.jpg/revision/latest?cb=20110111234925"		
+		},
+		{
+			"username":"Chandler",
+			"name": "Chips",
+			"imageURL": "http://vignette2.wikia.nocookie.net/athfwiki/images/a/a8/Meatwad.jpg/revision/latest?cb=20110111234925"		
+		},
+		{
+			"username":"Monica",
+			"name": "Steak",
+			"imageURL": "http://vignette2.wikia.nocookie.net/athfwiki/images/a/a8/Meatwad.jpg/revision/latest?cb=20110111234925"		
+		},
+		{
+			"username":"Rachel",
+			"name": "Coffee",
+			"imageURL": "http://vignette2.wikia.nocookie.net/athfwiki/images/a/a8/Meatwad.jpg/revision/latest?cb=20110111234925"		
+		},
+		{
+			"username":"Phoebe",
+			"name": "Salad",
+			"imageURL": "http://vignette2.wikia.nocookie.net/athfwiki/images/a/a8/Meatwad.jpg/revision/latest?cb=20110111234925"		
+		}
+	]
+}

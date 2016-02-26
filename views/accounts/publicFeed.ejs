@@ -1,0 +1,24 @@
+<%- layout('layout') -%>
+
+<div id="midContainer" class="container">
+
+  <div id="pplBtn" class="container">
+    <h1 style="padding-top:50px;">Feed</h1>
+    <a href="/profile"><button id="testjs" class="btn btn-primary">You</button></a>
+    <a href="/friendFeed"><button id="testjs" class="btn btn-primary">Friends</button></a>
+    <a href="/publicFeed"><button id="testjs" class="btn btn-primary active">Public</button></a>
+  </div>
+
+
+  <div id="fodderBox" class="container">
+    <h4>
+    <div class="entry-div">
+      <img src="<%= user.profile.picture %>" class="detailsImage">
+      <p><a href="/profile"><%= user.profile.name %></a> prepared <a href="/recipe">Spaghetti</a></p>
+    </div>
+
+    </h4>
+  </div>
+  <!-- {{/each}} -->
+
+</div>
