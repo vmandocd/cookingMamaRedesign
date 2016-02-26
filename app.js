@@ -111,5 +111,5 @@ function for getting the recipes
 /******Local Setup: change 'port' to 'secret.port'  *************/
  app.listen(port, function(err){
    if(err) throw err;
-   console.log("Server is running on port: " + secret.port);
+   console.log("Server is running on port: " + port);
  });
