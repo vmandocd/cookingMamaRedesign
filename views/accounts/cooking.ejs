@@ -12,10 +12,32 @@
         <ul>
           <li><%= product.ingredients %></li>
           <li><%= product.instructions %></li>
-          <input id="clickMe" class="btn btn-primary" value="Start/Stop Timer" onclick="start();" />
+          <div class="col-md-1">
+            <div class="form-group">
+              <div class="input-group">
+                <label="image">Hours</label>
+                <input id="sec" type="number" class="form-control" min="0" max="12" placeholder="0">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="form-group">
+              <div class="input-group">
+                <label="image">Mins </label>
+                <input id="hour" type="number" class="form-control" min="0" max="59" placeholder="0">
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" onclick="start();">Start/Stop Timer</button>
+          <a href="/cooking/<%= product._id %>"><button class="btn btn-primary">Reset Timer</button></a>
         </ul>
         </div>
+        <div id="notificationBlock">
+          <div class="notificatorWrapper">
 
+          </div>
+        </div>
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
