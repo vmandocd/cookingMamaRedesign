@@ -12,7 +12,7 @@
         <ul>
           <li><%= product.ingredients %></li>
           <li><%= product.instructions %></li>
-          <input id="clickMe" type="button" value="Start/Stop Timer" onclick="start();" />
+          <input id="clickMe" class="btn btn-primary" value="Start/Stop Timer" onclick="start();" />
         </ul>
         </div>
 
@@ -40,9 +40,9 @@
             </div>
       </div>
     </div>
-            <div class="pager">
-          <li class="next"><a href="/completedCook/<%= product._id %>">Next</a></li>
-        </div>
+    <div>
+    <a href="/completedCook/<%= product._id %>"><button id="complete" class="btn btn-primary"><h3>Finish</h3></button></a>
+  </div>
   </div>
 </div>
 

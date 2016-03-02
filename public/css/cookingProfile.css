@@ -1,9 +1,9 @@
 #background {
-    width: 100%; 
-    height: 100%; 
-    position: fixed; 
-    left: 0px; 
-    top: 0px; 
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
     z-index: -1;
 }
 .stretch {
@@ -33,9 +33,8 @@
     opacity: 0.9;
     /*margin: 5px, auto, 10px, auto;*/
 }
-.pager{
-    padding-top: 280px;
-
+#complete{
+  margin-left: 50px;
 }
 .recipe{
     padding: 0px, 0px, 0px, 0px;

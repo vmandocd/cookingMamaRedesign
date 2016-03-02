@@ -11,14 +11,14 @@
   <div class="pubFeedRedesign">
       <div class="container">
           <div class="row">
-  
+
             <% if(people.length > 0) {%>
               <% for(var i = 0; i < people.length; i++) { %>
                 <% for(var j = 0; j < people[i].history.length; j++) { %>
 
                   <div class="col-xs-6" style="opacity:0.9;">
                       <div class="thumbnail">
-                          <img src="<%= user.profile.picture %>">
+                          <img src="<%= people[i].history[j].image %>">
                           <div class="caption">
                               <h3><a href="/profile"><%= people[i].profile.name %></a> prepared <a href="/product/<%= people[i].history[j].item %>"><%= people[i].history[j].name %></a></h3>
                           </div>
@@ -30,6 +30,6 @@
             <% } %>
 
           </div>
-      </div>     
+      </div>
   </div>
 </div>

@@ -19,6 +19,7 @@ var UserSchema = new mongoose.Schema({
   history: [{
     item: {type: Schema.Types.ObjectId, ref: 'Product'},
     name: String,
+    image: String,
     date: Date
     //item: {type: Number, default: 0},
 

@@ -159,6 +159,7 @@ router.post('/completedCook/:product_id', function(req, res, next){
     user.history.push({
       item: req.body.product_id,
       name: req.body.product_name,
+      image: req.body.image,
       date: dateCooked
     });
     user.save(function(err){
