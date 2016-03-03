@@ -29,13 +29,13 @@
  var app = express();
 
 /***********Local setup************************/
- mongoose.connect(secret.database, function(err){
-   if(err){
-     console.log(err);
-   }else{
-     console.log("Connected to the MongoDB");
-   }
- });
+ // mongoose.connect(secret.database, function(err){
+ //   if(err){
+ //     console.log(err);
+ //   }else{
+ //     console.log("Connected to the MongoDB");
+ //   }
+ // });
 /***********Local setup************************/
 
  /*****Heroku Setup********/
@@ -109,8 +109,8 @@ function for getting the recipes
 
 /******Heroku Setup: change 'secret.port' to 'port' *************/
 /******Local Setup: change 'port' to 'secret.port'  *************/
- app.listen(secret.port, function(err){
+ app.listen(port, function(err){
    if(err) throw err;
 
-   console.log("Server is running on port: " + secret.port);
+   console.log("Server is running on port: " + port);
  });
