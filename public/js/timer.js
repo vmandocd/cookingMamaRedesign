@@ -96,9 +96,11 @@ function tick() {
   parts[1] = (parts[1].length == 1) ? '0' + parts[1] : parts[1];
   parts[2] = (parts[2].length == 1) ? '0' + parts[2] : parts[2];
 
+  // console.log("part0" +parts[0]);
+  // console.log("part1" + parts[1]);
+  // console.log("part2" + parts[2]);
 
-
-  if(parts[1] == hour && parts[2] == min){
+  if(parts[0] == hour && parts[1] == min){
     tickAudio.play();
     start();
     if(timerNotify == false){
