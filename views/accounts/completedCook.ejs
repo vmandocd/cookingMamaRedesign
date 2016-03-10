@@ -5,6 +5,13 @@
     <h1 style="padding-top:50px; padding-left:50px;">Cooking <%= product.name %> Complete !!</h1>
     <a href="/products/<%= categories[0]._id %>"><button id="testjs" class="btn btn-primary"><h4>Find Another Recipe</h4></button></a>
 
+    <% if (errors.length > 0) { %>
+      <br>
+      <div class="alert alert-danger alert-dismissible">
+          <strong><%= errors %></strong>
+      </div>
+    <% } %>
+    
     <form method="post">
     <input type="hidden" name="product_id" value="<%= product._id %>"></input>
     <input type="hidden" name="product_name" value="<%= product.name %>"></input>
@@ -25,7 +32,7 @@
         </select>
         <br>
         <label="image">Image URL: </label>
-        <input type="text" class="form-control" name="image" placeholder="EX: http://i.imgur.com/Cj28dWe.jpg">
+        <input type="text" class="form-control" name="image" placeholder="EX: http://i.imgur.com/Cj28dWe.jpg" required pattern="https?://.+">
         <br>
     </div>
 

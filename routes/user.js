@@ -146,9 +146,7 @@ router.get('/completedCook', function(req, res ,next){
 router.get('/completedCook/:id', function(req, res, next){
   Product.findById({_id: req.params.id}, function(err, product){
     if(err) return next(err);
-    res.render('accounts/completedCook', {
-      product: product
-    });
+    res.render('accounts/completedCook', { product: product, errors: req.flash('errors') });
   });
 });
 
@@ -156,24 +154,24 @@ router.post('/completedCook/:product_id', function(req, res, next){
   User.findOne({_id: req.user._id}, function(err, user){
     var d = new Date();
     var dateCooked = d.getDate();
-    if(!req.body.comment){
-      req.body.comment = " ";
+
+    if(req.body.comment == ""){
+      req.flash('errors', 'Must complete comment field!!');
+      return res.redirect('/completedCook/'+req.body.product_id);
+    }else{
+      user.history.push({
+        item: req.body.product_id,
+        name: req.body.product_name,
+        image: req.body.image,
+        comment: req.body.comment,
+        feeling: req.body.feeling,
+        date: dateCooked
+      });
+      user.save(function(err){
+        if(err) return next(err);
+        return res.redirect('/publicFeed');
+      });
     }
-    if(!req.body.image){
-      req.body.image = "http://loremflickr.com/320/240/food"
-    }
-    user.history.push({
-      item: req.body.product_id,
-      name: req.body.product_name,
-      image: req.body.image,
-      comment: req.body.comment,
-      feeling: req.body.feeling,
-      date: dateCooked
-    });
-    user.save(function(err){
-      if(err) return next(err);
-      return res.redirect('/publicFeed');
-    });
   });
 });
 

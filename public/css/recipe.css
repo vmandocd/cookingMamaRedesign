@@ -29,6 +29,7 @@
   text-align: center;
 }
 #fodderBox{
+  opacity: 0.9;
   background-color: white;
   text-align: center;
   padding-right: 75px;
