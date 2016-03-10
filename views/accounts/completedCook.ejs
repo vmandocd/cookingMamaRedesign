@@ -8,8 +8,27 @@
     <form method="post">
     <input type="hidden" name="product_id" value="<%= product._id %>"></input>
     <input type="hidden" name="product_name" value="<%= product.name %>"></input>
-    <label="image">Image URL: </label>
-    <input type="text" class="form-control" name="image">
+    <div class="form-group">
+      <label="Comment">Comment </label>
+      <textarea type="text" class="form-control" name="comment" placeholder="Tell us your story" rows="3"></textarea>
+    </div>
+    <br>
+    <label for="feeling">Feeling:</label>
+        <select class="form-control" id="feeling" name="feeling">
+          <option>Happy</option>
+          <option>Sad</option>
+          <option>Stuffed</option>
+          <option>Motivated</option>
+          <option>Meat Sweats</option>
+          <option>Hangry</option>
+          <option>Stoked</option>
+        </select>
+        <br>
+        <label="image">Image URL: </label>
+        <input type="text" class="form-control" name="image" placeholder="EX: http://i.imgur.com/Cj28dWe.jpg">
+        <br>
+    </div>
+
     <button type="submit" class="btn btn-success"><h2>Post and Finish</h2></button>
     </form>
 </div>

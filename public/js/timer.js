@@ -50,16 +50,16 @@ function start() {
     }
   }
   console.log("hours: " + hour);
-  sec = document.getElementById("sec").value;
+  min = document.getElementById("min").value;
 
-  if(sec < 10){
-    if(sec == ''){
-      sec = '00';
+  if(min < 10){
+    if(min == ''){
+      min = '00';
     }else{
-      sec = '0'+ sec;
+      min = '0'+ min;
     }
   }
-  console.log("seconds: " + sec);
+  console.log("minutes: " + min);
   toggleAnimation();
 
   if(timerIsOn) {
@@ -98,7 +98,7 @@ function tick() {
 
 
 
-  if(parts[1] == hour && parts[2] == sec){
+  if(parts[1] == hour && parts[2] == min){
     tickAudio.play();
     start();
     if(timerNotify == false){

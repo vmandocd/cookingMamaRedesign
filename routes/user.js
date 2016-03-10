@@ -156,10 +156,18 @@ router.post('/completedCook/:product_id', function(req, res, next){
   User.findOne({_id: req.user._id}, function(err, user){
     var d = new Date();
     var dateCooked = d.getDate();
+    if(!req.body.comment){
+      req.body.comment = " ";
+    }
+    if(!req.body.image){
+      req.body.image = "http://loremflickr.com/320/240/food"
+    }
     user.history.push({
       item: req.body.product_id,
       name: req.body.product_name,
       image: req.body.image,
+      comment: req.body.comment,
+      feeling: req.body.feeling,
       date: dateCooked
     });
     user.save(function(err){

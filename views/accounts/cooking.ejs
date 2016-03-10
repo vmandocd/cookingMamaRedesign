@@ -2,8 +2,7 @@
 
 <!--container for cooking instructions-->
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12">
+
       <div class="main-content" id="top">
 
         <div class ="recipe">
@@ -12,65 +11,60 @@
         <ul>
           <li><%= product.ingredients %></li>
           <li><%= product.instructions %></li>
-          <div class="col-md-1">
-            <div class="form-group">
-              <div class="input-group">
-                <label="image">Hours</label>
-                <input id="sec" type="number" class="form-control" min="0" max="12" placeholder="0">
-              </div>
+        </ul>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-5">
+            <div class="input-group">
+              <div class="input-group-addon">Hours</div>
+              <input id="hour" type="number" class="form-control" min="0" max="12" placeholder="0" >
             </div>
           </div>
-          <div class="col-md-1">
-            <div class="form-group">
-              <div class="input-group">
-                <label="image">Mins </label>
-                <input id="hour" type="number" class="form-control" min="0" max="59" placeholder="0">
-              </div>
+          <div class="col-xs-5">
+            <div class="input-group">
+              <div class="input-group-addon">Mins</div>
+              <input id="min" type="number" class="form-control" min="0" max="59" placeholder="0" >
             </div>
           </div>
+        </div>
 
           <button class="btn btn-primary" onclick="start();">Start/Stop Timer</button>
           <a href="/cooking/<%= product._id %>"><button class="btn btn-primary">Reset Timer</button></a>
-        </ul>
-        </div>
+
         <div id="notificationBlock">
           <div class="notificatorWrapper">
-
           </div>
         </div>
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="main-content">
-          <div class="timer-group">
-            <div class="timer hour">
-              <div class="hand"><span class="handspan"></span></div>
-              <div class="hand"><span class="handspan"></span></div>
-              </div>
-            <div class="timer minute">
-              <div class="hand"><span class="handspan"></span></div>
-              <div class="hand"><span class="handspan"></span></div>
-              </div>
-            <div class="timer second">
-              <div class="hand"><span class="handspan"></span></div>
-              <div class="hand"><span class="handspan"></span></div>
-              </div>
-            <div class="face">
-              <h2>Little Cooker</h2>
-              <p id="lazy">00:00:00</p>
+
+
+              <div class="main-content">
+                <div class="timer-group">
+                  <div class="timer hour">
+                    <div class="hand"><span class="handspan"></span></div>
+                    <div class="hand"><span class="handspan"></span></div>
+                  </div>
+                  <div class="timer minute">
+                    <div class="hand"><span class="handspan"></span></div>
+                    <div class="hand"><span class="handspan"></span></div>
+                  </div>
+                  <div class="timer second">
+                    <div class="hand"><span class="handspan"></span></div>
+                    <div class="hand"><span class="handspan"></span></div>
+                  </div>
+                  <div class="face">
+                    <h2>Little Cooker</h2>
+                    <p id="lazy">00:00:00</p>
+                  </div>
               </div>
             </div>
-      </div>
-    </div>
-    <div>
-    <a href="/completedCook/<%= product._id %>"><button id="complete" class="btn btn-primary"><h3>Finish</h3></button></a>
-  </div>
-  </div>
+
+          <div>
+            <a href="/completedCook/<%= product._id %>"><button id="complete" class="btn btn-primary pull-right"><h3>Finish</h3></button></a>
+          </div>
+          <br>
+        </div>
 </div>
 
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- <script src="/js/cookingLoader.js"></script> -->

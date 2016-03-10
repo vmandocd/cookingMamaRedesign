@@ -22,7 +22,12 @@
                           <div class="caption">
                               <h3><a href="/profile"><%= people[i].profile.name %></a> prepared <a class="cookBtn" href="/product/<%= people[i].history[j].item %>"><%= people[i].history[j].name %></a></h3>
                           </div>
+                          <div class="container">
+                          <p><%= people[i].history[j].comment %></p>
+                          <p><strong>Feeling: </strong><%= people[i].history[j].feeling %></p>
+                        </div>
                       </div>
+
                   </div>
 
                 <% } %>

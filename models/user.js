@@ -20,9 +20,9 @@ var UserSchema = new mongoose.Schema({
     item: {type: Schema.Types.ObjectId, ref: 'Product'},
     name: String,
     image: String,
+    comment: String,
+    feeling: String,
     date: Date
-    //item: {type: Number, default: 0},
-
   }]
 })
 
